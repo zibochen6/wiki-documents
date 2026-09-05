@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-08-27 10:02:05 (北京时间)
-// 多语言页面: 2457 个
+// 生成时间: 2026-09-04 16:34:19 (北京时间)
+// 多语言页面: 2470 个
 
 (function() {
   'use strict';
@@ -1675,7 +1675,14 @@
     "ja",
     "pt"
   ],
-  "/build_and_flash_yocto_for_recomputer_super_bk": [
+  "/jetpack_7_2_memory_optimization_deep_dive": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/build_and_flash_yocto_for_seeed_jetson_carrier_boards": [
     "cn",
     "en",
     "es",
@@ -1774,6 +1781,13 @@
     "pt"
   ],
   "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson-product-selection-guide": [
     "cn",
     "en",
     "es",
@@ -4076,7 +4090,21 @@
     "ja",
     "pt"
   ],
+  "/recamera_pro_debian": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_pro_development_cpp_skill": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_rknn_model_conversion": [
     "cn",
     "en",
     "es",
@@ -4271,6 +4299,55 @@
     "pt"
   ],
   "/R1000_default_username_password": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_2_mics_pi_hat_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_lite_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3000_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_faq": [
     "cn",
     "en",
     "es",
@@ -11751,6 +11828,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_clip_ai_chat_system_architecture": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_clip_customization_at_command": [
     "cn",
     "en",
@@ -11787,6 +11871,13 @@
     "pt"
   ],
   "/respeaker_clip_python_build_app_with_memory": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_clip_rtc_streaming": [
     "cn",
     "en",
     "es",

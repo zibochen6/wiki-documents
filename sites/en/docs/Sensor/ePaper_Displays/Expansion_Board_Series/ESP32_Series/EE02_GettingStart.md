@@ -15,7 +15,7 @@ last_update:
   date: 8/18/2026
   author: Nemo
 createdAt: '2025-12-19'
-updatedAt: '2026-08-25'
+updatedAt: '2026-09-02'
 url: https://wiki.seeedstudio.com/getting_started_with_ee02/
 ---
 
@@ -145,7 +145,7 @@ Once the network configuration is successful, the screen will refresh again and 
 ### Platform Binding & Update
 
 **Step 6. Bind Device on SenseCraft HMI**
-Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "Add Device". Enter the Pairing Code displayed on your E-ink screen to bind the device to your account.
+Go to the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device). Log in to your account. Navigate to the device management section and select "New Device". Enter the Pairing Code displayed on your E-ink screen to bind the device to your account.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.png" style={{width:800, height:'auto'}}/></div>
 

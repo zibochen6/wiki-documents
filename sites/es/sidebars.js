@@ -2204,6 +2204,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Preguntas frecuentes',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/es_respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/es_xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/es_flex_xvf3800_faq',
+            'FAQ/respeaker/es_respeaker_lite_faq',
+            'FAQ/respeaker/es_xvf3000_faq',
+            'FAQ/respeaker/es_respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/es_respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Aplicaciones',
           collapsed: true,
           collapsible: true,
@@ -2257,6 +2275,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/es_respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/es_respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3831,6 +3850,7 @@ const sidebars = {
           type: 'category',
           label: 'Comenzando',
           items: [
+            'Edge/NVIDIA_Jetson/es_Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4278,6 +4298,7 @@ const sidebars = {
               label: 'Optimización de memoria',
               items: [
                 'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization',
+                'Edge/NVIDIA_Jetson/JetPack_7_2/Optimization/es_JetPack_7_2_Memory_Optimization_Deep_Dive',
               ],
             },
             {

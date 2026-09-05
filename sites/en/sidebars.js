@@ -2210,6 +2210,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'FAQ',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'FAQ/respeaker/respeaker_faq',
+          },
+          items: [
+            'FAQ/respeaker/xvf3800_usb_4_mic_faq',
+            'FAQ/respeaker/flex_xvf3800_faq',
+            'FAQ/respeaker/respeaker_lite_faq',
+            'FAQ/respeaker/xvf3000_faq',
+            'FAQ/respeaker/respeaker_2_mics_pi_hat_faq',
+            'FAQ/respeaker/respeaker_clip_faq',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Applications',
           collapsed: true,
           collapsible: true,
@@ -2263,6 +2281,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe',
                 'Sensor/reSpeaker_clip/respeaker_clip_python_usage_stt_llm_transcribe_memory',
+                'Sensor/reSpeaker_clip/respeaker_clip_chat_architecture',
               ],
             },
           ],
@@ -3837,6 +3856,7 @@ const sidebars = {
           type: 'category',
           label: 'Getting Started',
           items: [
+            'Edge/NVIDIA_Jetson/Jetson_Product_Selection_Guide',
             // Carrier Boards
             {
               type: 'category',
@@ -4183,6 +4203,7 @@ const sidebars = {
               type: 'category',
               label: 'Physical AI',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Microduck_RL_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
