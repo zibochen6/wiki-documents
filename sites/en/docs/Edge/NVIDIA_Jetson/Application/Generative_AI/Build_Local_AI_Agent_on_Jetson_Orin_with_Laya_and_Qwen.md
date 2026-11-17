@@ -1,6 +1,6 @@
 ---
 title: Local Browser Agent on Jetson Orin
-description: A small local decision model picks each browser action on NVIDIA Jetson Orin; Qwen executes it. Laya + Qwen demo on reComputer, fully on-device, no cloud.
+description: Laya selects browser actions and Qwen parses requests on NVIDIA Jetson Orin. Run the flight and whiteboard demos with a Docker image that includes both models.
 keywords:
   - NVIDIA Jetson
   - Jetson Orin
@@ -42,7 +42,7 @@ This wiki builds a **local browser agent on NVIDIA Jetson Orin**. **Laya local d
 
 The decision model is swappable: this demo uses Laya, but any model that returns a structured action as JSON can take its place.
 
-Let's take a look at the actual test results. The agent is asked to search for one-way direct flights from Shenzhen to Shanghai, sorted by the lowest price, and the ticket options for the matching flights are displayed. The entire execution process only took 32.8 seconds. Those who have used agents to perform various browser automation operations can appreciate that this time consumption is quite advantageous.
+Let's take a look at the actual test results. The agent is asked to search for one-way direct flights from Shenzhen to Shanghai, sorted by the lowest price, and the ticket options for the matching flights are displayed. This recorded native task took 32.8 seconds with models preloaded and existing search conditions reused. It is a historical demonstration, not a Docker latency guarantee or a comparison against other agents.
 <div align="center">
   <img width={960} src="https://files.seeedstudio.com/wiki/Jetson/Application/jetson-laya-flight-search-demo.gif" alt="Animated screen recording of the flight demo: the agent fills in and confirms a one-way Shenzhen to Shanghai search, narrows results to nonstop flights sorted by lowest price, and opens the fare-options layer for one matching flight." loading="lazy" />
 </div>
@@ -147,6 +147,49 @@ In the Camera example, the program follows these steps:
 If the result still needs work, the program can repeat the loop with the updated canvas, within its retry limits. If the checks pass, it reports the task as complete. Even if the model returns `DONE`, the program still checks the actual result.
 
 The same idea applies to flights: the program provides actions such as selecting a date, then checks the route, date and other requirements. These actions are implemented in the application. Laya chooses among them; it does not create new tools on its own.
+
+## Docker case in jetson-examples
+
+:::note Preview release
+The Docker case is a preview. Check its validation status before treating it as a
+tested release. The existing native setup below remains available.
+:::
+
+The `laya-browser` example packages the application, CUDA dependencies, Chromium,
+Laya and Qwen weights, and the compiled llama.cpp server in one ARM64 Docker image.
+The original flight and whiteboard animations above are reused unchanged.
+Docker-specific acceptance is recorded separately from those original demonstrations.
+
+The first Docker release targets **reComputer Industrial J4012 / Orin NX16GB,
+L4T36.4.3 and a logged-in X11 desktop**. Prepare Docker, Compose v2, NVIDIA Container
+Runtime and `xauth` on the host. The launcher does not upgrade JetPack or install
+Python/model packages on the host.
+
+Install a jetson-examples release/source checkout that contains this case, then run:
+
+```bash
+reComputer run laya-browser check
+reComputer run laya-browser
+```
+
+Wait for `Models ready` and `Task>`, then enter a flight request with a valid future
+date. Models are already included in the image; image pulling and loading are
+separate from task execution. Finish the task and enter `exit` before switching:
+
+```bash
+reComputer run laya-browser whiteboard
+reComputer run laya-browser status
+reComputer clean laya-browser
+```
+
+Cleanup stops/removes only the example container and retains the image and user
+records. Persistent configuration, browser data and exported diagrams live under
+`~/reComputer/laya-browser/persistent/`. The browser appears on the Jetson's real
+desktop. No internal control ports are published on the host.
+
+See the [case README and image validation](https://github.com/zibochen6/jetson-examples/tree/codex/laya-browser-docker/reComputer/scripts/laya-browser)
+for the preview release, image digest, disk requirements and offline import.
+The source-checkout installation below remains available independently.
 
 ## Quickly run on Jetson Orin
 
